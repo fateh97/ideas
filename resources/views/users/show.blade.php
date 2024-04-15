@@ -10,6 +10,13 @@
             <div class="mt-3">
                 @include('shared.user-card')
                 <hr>
+                @forelse ($ideas as $idea)
+                    <div class="mt-3">
+                        @include('shared.idea-card')
+                    </div>
+                @empty
+                    <p class="text-center my-4">No Results Found.</p>
+                @endforelse
             </div>
         </div>
         <div class="col-3">

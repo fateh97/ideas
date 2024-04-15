@@ -44,11 +44,11 @@ class User extends Authenticatable
 
     public function ideas()
     {
-        return $this->hasMany(Ideas::class);
+        return $this->hasMany(Ideas::class)->latest();
     }
 
     public function comments()
     {
-        return $this->hasMany(Comment::class);
+        return $this->hasMany(Comment::class)->latest();
     }
 }
